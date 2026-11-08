@@ -1,0 +1,22 @@
+CREATE DATABASE IF NOT EXISTS nexus_hardware CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE nexus_hardware;
+CREATE TABLE IF NOT EXISTS produtos (
+ id INT PRIMARY KEY, nome VARCHAR(160) NOT NULL, categoria VARCHAR(80) NOT NULL,
+ tipo VARCHAR(80) NOT NULL, preco_centavos INT UNSIGNED NOT NULL,
+ estoque INT UNSIGNED NOT NULL, imagem VARCHAR(255) NOT NULL,
+ destaque BOOLEAN NOT NULL DEFAULT FALSE, selo VARCHAR(80) NOT NULL DEFAULT '',
+ descricao TEXT NOT NULL, especificacoes JSON NOT NULL
+) ENGINE=InnoDB;
+CREATE TABLE IF NOT EXISTS pedidos (
+ id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ cliente_nome VARCHAR(120) NOT NULL, cliente_email VARCHAR(160) NOT NULL,
+ cep VARCHAR(9) NOT NULL DEFAULT '', frete_centavos INT UNSIGNED NOT NULL DEFAULT 0,
+ total_centavos BIGINT UNSIGNED NOT NULL, criado_em DATETIME NOT NULL
+) ENGINE=InnoDB;
+CREATE TABLE IF NOT EXISTS pedido_itens (
+ pedido_id BIGINT UNSIGNED NOT NULL, produto_id INT NOT NULL,
+ quantidade INT NOT NULL, preco_centavos INT UNSIGNED NOT NULL,
+ PRIMARY KEY (pedido_id, produto_id),
+ FOREIGN KEY (pedido_id) REFERENCES pedidos(id),
+ FOREIGN KEY (produto_id) REFERENCES produtos(id)
+) ENGINE=InnoDB;

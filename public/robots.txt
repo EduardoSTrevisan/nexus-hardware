@@ -1,0 +1,4 @@
+# GitHub Pages static: a demonstração acadêmica não deve ser indexada.
+# No servidor PHP, robots.txt é servido dinamicamente pelo router.php.
+User-agent: *
+Disallow: /

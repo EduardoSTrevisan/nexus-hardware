@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="NEXUS Hardware: uma loja virtual demonstrativa de componentes e periféricos para computadores.">
+  <title>NEXUS Hardware | Monte seu próximo setup</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js" defer></script>
+  <script src="js/produtos-demo.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/app.js" defer></script>
+  <script src="js/index.js" defer></script>
+</head>
+<body>
+  <div class="announcement">PROJETO ACADÊMICO <span>•</span> LOJA DE DEMONSTRAÇÃO <span>•</span> SEM VENDAS REAIS</div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="NEXUS Hardware, início"><span class="brand-mark">N<span>·</span></span><span>NEXUS<small>HARDWARE</small></span></a>
+    <nav class="main-nav" aria-label="Navegação principal"><a href="index.html" data-link-nav>Início</a><a href="index.html#produtos">Produtos</a><a href="index.html#sobre">Sobre</a></nav>
+    <a class="cart-top" href="carrinho.html" aria-label="Abrir carrinho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h2l2.2 11.2a2 2 0 0 0 2 1.8H19a2 2 0 0 0 2-1.6l1-6.4H6"/><circle cx="10" cy="21" r="1"/><circle cx="19" cy="21" r="1"/></svg><span>Carrinho</span><b data-contador-carrinho>0</b></a>
+  </div></header>
+
+  <main>
+    <section class="hero"><div class="container hero-inner"><div class="hero-copy">
+      <div class="hero-kicker"><span class="pulse"></span> O SEU SETUP COMEÇA AQUI</div>
+      <h1>Hardware que acompanha <em>sua próxima conquista.</em></h1>
+      <p>Componentes, periféricos e tecnologia para transformar suas ideias em realidade. Explore nossa seleção.</p>
+      <div class="hero-actions"><a class="btn btn-primary" href="#produtos">Explorar produtos <span>↗</span></a><a class="btn btn-ghost" href="#destaques">Ver destaques <span>↓</span></a></div>
+      <div class="hero-proof"><div class="hero-proof-icon">⌘</div><div><strong>Escolha. Monte. Evolua.</strong><span>Seu próximo projeto começa com uma boa escolha.</span></div></div>
+    </div><div class="hero-visual" aria-hidden="true"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="hero-glow"></div><div class="visual-label label-top"><span>●</span> COMPONENTES PARA SEU PC</div><img src="assets/gpu.svg" alt=""><div class="visual-label label-bottom">PERFORMANCE <span>EM CADA DETALHE</span></div></div></div></section>
+
+    <section class="feature-strip"><div class="container feature-grid"><div><span class="feature-icon">⌁</span><div><strong>Escolha inteligente</strong><p>Peças para diferentes setups</p></div></div><div><span class="feature-icon">▣</span><div><strong>Catálogo completo</strong><p>Componentes e periféricos</p></div></div><div><span class="feature-icon">↗</span><div><strong>Experiência simples</strong><p>Navegue e simule seu pedido</p></div></div></div></section>
+
+    <section id="destaques" class="section section-destaques"><div class="container"><div class="section-title-row"><div><p class="eyebrow section-eyebrow">SELEÇÃO NEXUS</p><h2>Em destaque <span class="accent-dot">.</span></h2><p class="section-subtitle">Peças que merecem um lugar no seu setup.</p></div><a href="#produtos" class="text-link">Ver todos os produtos ↗</a></div><div id="grade-destaques" class="product-grid"><p class="loading">Carregando destaques...</p></div></div></section>
+
+    <section class="banner"><div class="container banner-inner"><div class="banner-symbol">N<span>·</span></div><div><p class="eyebrow">SEU SETUP, SUAS REGRAS</p><h2>Cada componente faz diferença.</h2><p>Encontre as peças que combinam com o seu projeto.</p></div><a href="#produtos" class="btn btn-light">Escolher componentes <span>↗</span></a></div></section>
+
+    <section id="produtos" class="section section-catalogo"><div class="container"><div class="section-title-row catalog-title"><div><p class="eyebrow section-eyebrow">EXPLORE NOSSA LOJA</p><h2>Todos os produtos <span class="accent-dot">.</span></h2><p class="section-subtitle">Tudo o que você precisa para começar seu próximo setup.</p></div></div>
+      <div class="shop-toolbar"><div id="categorias" class="categories" aria-label="Filtrar por categoria"></div><div class="filters"><label class="search-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input id="busca" type="search" placeholder="Buscar produtos..." aria-label="Buscar produtos"></label><select id="ordenar" aria-label="Ordenar produtos"><option value="padrao">Ordenar por padrão</option><option value="menor">Menor preço</option><option value="maior">Maior preço</option><option value="nome">Nome A–Z</option></select></div></div>
+      <p id="quantidade-resultados" class="results-count" aria-live="polite"></p>
+      <div id="grade-produtos" class="product-grid"><p class="loading">Carregando produtos...</p></div>
+    </div></section>
+
+    <section id="sobre" class="about-section"><div class="container about-inner"><div><p class="eyebrow section-eyebrow">SOBRE O PROJETO</p><h2>Uma loja pronta para evoluir.</h2></div><div><p>A NEXUS Hardware é um projeto acadêmico desenvolvido com <strong>HTML, CSS e JavaScript puro</strong>, preparado para integrar uma API em <strong>PHP</strong>. Os produtos, valores e pedidos atuais são exemplos de demonstração.</p><a href="carrinho.html" class="text-link">Testar o carrinho ↗</a></div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-top"><a class="brand" href="index.html"><span class="brand-mark">N<span>·</span></span><span>NEXUS<small>HARDWARE</small></span></a><p>Feita para quem leva tecnologia a sério.<br>Projeto acadêmico, sem vendas reais.</p><div class="footer-links"><a href="index.html#produtos">Produtos</a><a href="carrinho.html">Carrinho</a><a href="index.html#sobre">Sobre</a></div></div><div class="container footer-bottom"><span>© <span data-ano>2026</span> NEXUS Hardware • Todos os produtos são ilustrativos.</span><div id="demo-footer"><button id="reset-demo" class="reset-btn">↻ Restaurar estoque de teste</button></div></div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body></html>

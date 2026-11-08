@@ -1,0 +1,56 @@
+PUBLICAR GITHUB + TESTAR MCP + GOOGLE
+====================================
+Comece por PASSO_A_PASSO_GITHUB_GOOGLE_MCP.md
+Crie um repositório público e vazio chamado nexus-hardware.
+Execute PUBLICAR_NO_GITHUB.bat. Depois: Settings > Pages > main > /docs.
+O site vai funcionar primeiro em modo DEMO, sem PHP remoto.
+Depois publique a API PHP no Render para testar a conexão e o MCP.
+O Google precisa receber o sitemap após existir o URL público.
+
+NEXUS HARDWARE - ENTREGA PRONTA PARA CONFIGURACAO
+=================================================
+Projeto academico ficticio (sem pagamentos ou vendas reais).
+
+VOCE JA TEM:
+- WampServer / PHP 8.4
+- PostgreSQL 18 + pgAdmin 4
+- Banco nexus_hardware criado no pgAdmin
+- pdo_pgsql habilitado no PHP do terminal
+
+1) FACA BACKUP da pasta anterior. Extraia este ZIP para uma NOVA pasta.
+
+2) Dentro dessa nova pasta, clique duas vezes em INSTALAR_BANCO.bat.
+   Digite usuario postgres (Enter) e sua senha LOCAL do PostgreSQL.
+   Nao envie a senha no chat. O assistente:
+   - cria .env local (nao publicar)
+   - verifica que o banco selecionado e nexus_hardware
+   - cria tabelas produtos, pedidos e pedido_itens
+   - cadastra 10 produtos ficticios
+   - preserva estoque de itens ja cadastrados
+   - gera token administrativo aleatorio
+   - testa conexao e contagens
+   A instalacao pode ser repetida sem apagar pedidos existentes.
+
+3) Abra INICIAR_LOJA.bat e deixe a janela aberta.
+   Abra http://localhost:8000
+   Teste catalogo -> adicionar carrinho -> confirmar pedido.
+
+4) Prove que o banco funcionou: clique MOSTRAR_PEDIDOS.bat.
+   Tambem pode abrir pgAdmin > banco nexus_hardware > Query Tool
+   e executar sql/conferir_banco.sql (consultas apenas, nao alteram dados).
+   VERIFICAR_BANCO.bat verifica as tabelas e a conexao PHP/PostgreSQL.
+   RESTAURAR_ESTOQUE.bat repoe as unidades de demonstracao mediante confirmacao.
+
+5) Prove o MCP: mantenha a loja aberta e clique TESTAR_MCP.bat.
+   Exige Python 3.11+ e internet para instalar mcp[cli].
+   Ele testa a descoberta das 6 ferramentas e a busca real via API PHP.
+   Se quiser mostrar no Inspector: py -3 -m mcp dev mcp_servidor/servidor.py
+
+6) Apresentacao: APRESENTACAO_NEXUS_HARDWARE.pptx e GUIA_APRESENTACAO.md
+
+IMPORTANTE:
+- O banco PostgreSQL esta NO SEU COMPUTADOR. O ZIP nao tem sua senha nem dados reais.
+- Nao envie .env ou .env.backup ao GitHub; .gitignore os protege.
+- A loja ainda nao foi publicada no GitHub/Render.
+- Se a porta 8000 estiver ocupada, feche o servidor PHP anterior com Ctrl+C.
+- Xdebug pode avisar de E:\wamp64; e independente da conexao PostgreSQL.

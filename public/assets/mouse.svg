@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 500" role="img">
+    <defs>
+      <linearGradient id="metal" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#3a4657"/><stop offset=".4" stop-color="#1b2838"/><stop offset="1" stop-color="#0b1320"/></linearGradient>
+      <linearGradient id="metal2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#263241"/><stop offset="1" stop-color="#101820"/></linearGradient>
+      <linearGradient id="lime" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#8dde48"/><stop offset="1" stop-color="#b8ff71"/></linearGradient>
+      <linearGradient id="rgb"><stop stop-color="#7eff7f"/><stop offset=".3" stop-color="#4fe3e5"/><stop offset=".65" stop-color="#aa6aff"/><stop offset="1" stop-color="#fa95ba"/></linearGradient>
+      <radialGradient id="fan"><stop stop-color="#2c4353"/><stop offset=".36" stop-color="#0e1d2a"/><stop offset=".7" stop-color="#263645"/><stop offset="1" stop-color="#090f18"/></radialGradient>
+      <linearGradient id="glass"><stop stop-color="#172734"/><stop offset=".6" stop-color="#13262c"/><stop offset="1" stop-color="#142339"/></linearGradient>
+      <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#132d43"/><stop offset=".5" stop-color="#224552"/><stop offset="1" stop-color="#07131c"/></linearGradient>
+    </defs><g transform="rotate(-11 340 250)"><path d="M340 78C255 76 210 148 208 267v65c0 88 58 132 132 132s132-44 132-132v-65C470 148 425 76 340 78Z" fill="url(#metal)" stroke="#637886" stroke-width="8"/><path d="M340 81v176" stroke="#5b727b" stroke-width="7"/><path d="M219 228H460" stroke="#697f86" stroke-width="4"/><rect x="322" y="141" width="36" height="71" rx="17" fill="#a6ee50"/><path d="M255 308Q340 364 427 309" fill="none" stroke="url(#rgb)" stroke-width="9"/><path d="M278 377Q341 405 402 375" fill="none" stroke="#506779" stroke-width="3"/></g></svg>
